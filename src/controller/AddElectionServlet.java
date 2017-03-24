@@ -49,7 +49,7 @@ public class AddElectionServlet extends HttpServlet {
 		
 		request.setAttribute("CurrentElection", newElect);
 		getServletContext().getRequestDispatcher("/ballot.jsp").forward(request, response);
-
+		doGet(request, response);
 	}
 
 }

@@ -5,20 +5,16 @@
 <head>
 <%@ page import="java.util.ArrayList, model.Election" %>
 <%ArrayList<Election> allElections = (ArrayList<Election>)request.getAttribute("AllElections");
-
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Election Options</title>
 </head>
 <body>
-
-
-
 <form name="available-elections"  method="POST" action="MasterVMController">
-<b>Select and existing election, or click add election to start a new election.</b> <BR>
-   <table border=1 cellpadding=5>
+<b>Select an existing election or start a new election.</b><br/>
+   <table border=0 cellpadding=5>
 
-<select NAME="Select an election" SIZE="3" MULTIPLE>
+
    <%  for(int i = 0; i < allElections.size(); i++) {
            allElections.get(i).getElectionAlias();
    %>
@@ -29,10 +25,12 @@
    }
    %>
  </tr>
+ 
 </select>
 </table>
-<input type = "submit" name = "doThisToItem" value = "add election">
 <input type = "submit" name = "doThisToItem" value = "open selected election">
+<input type = "submit" name = "doThisToItem" value = "add new election">
+
 </form>
 </body>
 </html>

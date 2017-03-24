@@ -83,21 +83,21 @@ public class Election {
 
 
 	//methods to count ballots cast
-	public void voteForOption1() {
+	public void voteForC1() {
 		// TODO Auto-generated method stub
 		this.c1Votes++;
 		this.totalVotes++;
 	
 	}
 
-	public void voteForOption2() {
+	public void voteForC2() {
 		// TODO Auto-generated method stub
 		this.c2Votes++;
 		this.totalVotes++;
 
 	}
 
-	public void voteForOption3() {
+	public void voteForC3() {
 		// TODO Auto-generated method stub
 		this.c3Votes++;
 		this.totalVotes++;

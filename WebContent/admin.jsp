@@ -7,12 +7,13 @@
 <title>Create a new election</title>
 </head>
 <body>
-<form action = "AddElectionServlet" method = "post">
 
-Election name:<input type = "text" name = "electionTitle">
-Name of first candidate:<input type = "text" name = "name1">
-Name of second canidadate:<input type = "text" name = "name2">
-Name of third candidate:<input type = "text" name = "name3">
+<form action = "AddElectionServlet" method = "post">
+<p><b>Create a new election: </b></p>
+<p>Election name: <input type = "text" name = "electionTitle"></p>
+<p>Name of first candidate: <input type = "text" name = "name1"></p>
+<p>Name of second canidadate: <input type = "text" name = "name2"></p>
+<p>Name of third candidate: <input type = "text" name = "name3"></p>
 <input type = "submit" value = "Add election and candidates">
 
 

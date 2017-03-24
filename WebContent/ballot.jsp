@@ -10,17 +10,21 @@
 <title>Cast your ballot</title>
 </head>
 <body>
+
+
 <form name="eligible-candidates"  method="POST" action="AddVotesServlet">
-<%Election election = (Election)request.getAttribute("CurrentElection");  %>
+<%Election election = (Election)request.getAttribute("CurrentElection"); %>
+
 <table>
 <b>Vote for one candidate:</b> <BR>
-   <table border=1 cellpadding=5>
-
-<select NAME="Cast a ballot" SIZE="4" MULTIPLE>
+   <table border=0 cellpadding=5>
 <tr>
-<td><input type = "radio"  name = "Cast a ballot" value = ""></td>
+<td><%=election.getElectionAlias()%>: </td>
+<td><input type = "radio"  name = "VoteFor" value = "<%=election.getC1()%>" CHECKED></td>
 <td><%=election.getC1()%></td>
+<td><input type = "radio"  name = "VoteFor" value = "<%=election.getC2()%>"></td>
 <td><%=election.getC2()%></td>
+<td><input type = "radio"  name = "VoteFor" value = "<%=election.getC3()%>"></td>
 <td><%=election.getC3()%></td>
 </tr>
 
@@ -28,6 +32,11 @@
 </table>
 <input type = "submit" name = "doThisToItem" value = "cast ballot">
 <input type = "submit" name = "doThisToItem" value = "end election">
+<input type = "hidden" name = "eName" value = "<%=election.getElectionAlias() %>">
+
+
 </form>
+
+
 </body>
 </html>
